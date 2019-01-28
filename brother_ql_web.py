@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 This is a web service to print labels on Brother QL label printers.
@@ -195,7 +195,7 @@ def print_text():
         rotate = 'auto'
 
     qlr = BrotherQLRaster(CONFIG['PRINTER']['MODEL'])
-    create_label(qlr, im, context['label_size'], threshold=context['threshold'], cut=cut, rotate=rotate)
+    create_label(qlr, im, context['label_size'], threshold=context['threshold'], cut=True, rotate=rotate)
 
     if not DEBUG:
         try:
